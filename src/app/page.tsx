@@ -1,3 +1,9 @@
+import { MainTranslator } from '@/components/main-translator';
+
 export default function Home() {
-  return <></>;
+  return (
+    <main>
+      <MainTranslator />
+    </main>
+  );
 }
