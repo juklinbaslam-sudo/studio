@@ -6,7 +6,7 @@ import { translateIndonesianToKorean } from '@/ai/flows/translate-indonesian-to-
 import { generateRealisticKoreanAudio } from '@/ai/flows/generate-realistic-korean-audio';
 
 const TranslateSchema = z.object({
-  text: z.string().min(1, 'Please enter text to translate.').max(500, 'Text cannot be longer than 500 characters.'),
+  text: z.string().min(1, 'Please enter text to translate.').max(10000, 'Text cannot be longer than 10000 characters.'),
 });
 
 export interface TranslationResult {

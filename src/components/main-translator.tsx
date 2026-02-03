@@ -85,7 +85,7 @@ export function MainTranslator() {
                 name="text"
                 placeholder="e.g., 'Aku cinta kamu'"
                 className="h-full min-h-[200px] resize-none text-base"
-                maxLength={500}
+                maxLength={10000}
                 required
               />
             </CardContent>
