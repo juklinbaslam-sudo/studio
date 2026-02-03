@@ -1,8 +1,8 @@
 
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
 import { getTranslationAndAudio, type ActionState } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -36,7 +36,7 @@ function SubmitButton() {
 const initialState: ActionState = { success: false };
 
 export function MainTranslator() {
-  const [state, formAction] = useFormState(getTranslationAndAudio, initialState);
+  const [state, formAction] = useActionState(getTranslationAndAudio, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
   const lastToastTimestamp = useRef<number | undefined>();
